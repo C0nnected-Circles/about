@@ -1,245 +1,308 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>C0nnected Circles | Consulting Services</title>
-  <meta name="description" content="Fractional CTO, hands-on architecture, and senior engineering for connected systems, Azure/Fabric, and AI-augmented delivery." />
+  <meta name="description"
+    content="Fractional CTO, hands-on architecture, and senior engineering for connected systems, Azure/Fabric, and AI-augmented delivery." />
 
   <style>
-    :root{
-      --bg: #071a2b;           /* blueprint navy */
-      --grid: rgba(255,255,255,.07);
-      --ink: #eaf6ff;          /* chalk */
-      --muted: rgba(234,246,255,.78);
-      --line: rgba(255,255,255,.14);
-      --accent: #79c8ff;       /* blueprint bright */
+    :root {
+      --bg: #071a2b;
+      /* blueprint navy */
+      --grid: rgba(255, 255, 255, .07);
+      --ink: #eaf6ff;
+      /* chalk */
+      --muted: rgba(234, 246, 255, .78);
+      --line: rgba(255, 255, 255, .14);
+      --accent: #79c8ff;
+      /* blueprint bright */
       --accent2: #b8f3ff;
-      --card: rgba(255,255,255,.04);
-      --shadow: 0 18px 55px rgba(0,0,0,.35);
+      --card: rgba(255, 255, 255, .04);
+      --shadow: 0 18px 55px rgba(0, 0, 0, .35);
       --radius: 16px;
       --max: 980px;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
     }
 
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      color:var(--ink);
-      font-family:var(--sans);
-      line-height:1.55;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.55;
       background:
         linear-gradient(var(--grid) 1px, transparent 1px),
         linear-gradient(90deg, var(--grid) 1px, transparent 1px),
-        radial-gradient(900px 500px at 15% 5%, rgba(121,200,255,.14), transparent 60%),
-        radial-gradient(800px 520px at 85% 0%, rgba(184,243,255,.10), transparent 55%),
+        radial-gradient(900px 500px at 15% 5%, rgba(121, 200, 255, .14), transparent 60%),
+        radial-gradient(800px 520px at 85% 0%, rgba(184, 243, 255, .10), transparent 55%),
         var(--bg);
       background-size: 28px 28px, 28px 28px, auto, auto, auto;
       background-position: -1px -1px, -1px -1px, center, center, center;
     }
 
-    a{ color:var(--ink); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:28px 18px 72px;
+    a {
+      color: var(--ink);
+      text-decoration: none;
     }
 
-    header{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:16px;
-      padding:10px 0 24px;
+    a:hover {
+      text-decoration: underline;
     }
 
-    .brand b{
-      display:block;
-      font-size:18px;
-      letter-spacing:.3px;
-    }
-    .brand span{
-      display:block;
-      margin-top:6px;
-      color:var(--muted);
-      font-size:13.5px;
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 72px;
     }
 
-    nav{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    nav a{
-      font-size:13px;
-      color:var(--muted);
-      padding:8px 10px;
-      border:1px solid transparent;
-      border-radius:12px;
-    }
-    nav a:hover{
-      color:var(--ink);
-      border-color:var(--line);
-      background:rgba(255,255,255,.03);
-      text-decoration:none;
+    header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0 24px;
     }
 
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
+    .brand b {
+      display: block;
+      font-size: 18px;
+      letter-spacing: .3px;
     }
 
-    .hero{
-      padding:22px;
-    }
-    .hero h1{
-      margin:0 0 10px;
-      font-size:40px;
-      line-height:1.08;
-    }
-    @media (max-width:520px){ .hero h1{ font-size:34px; } }
-    .hero p{
-      margin:10px 0;
-      color:var(--muted);
-      max-width:70ch;
-      font-size:16px;
+    .brand span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13.5px;
     }
 
-    .pillrow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:14px;
-    }
-    .pill{
-      font-family:var(--mono);
-      font-size:12px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.16);
-      background:rgba(255,255,255,.03);
-      color:rgba(234,246,255,.92);
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .cta{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:18px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:11px 14px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.16);
-      background:rgba(255,255,255,.03);
-      font-size:14px;
-    }
-    .btn.primary{
-      border-color:rgba(121,200,255,.45);
-      background:linear-gradient(180deg, rgba(121,200,255,.18), rgba(121,200,255,.05));
-    }
-    .btn:hover{ transform:translateY(-1px); text-decoration:none; }
-
-    .sectionTitle{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-end;
-      gap:10px;
-      margin:26px 0 10px;
-    }
-    .sectionTitle h2{
-      margin:0;
-      font-size:18px;
-      letter-spacing:.2px;
-    }
-    .sectionTitle span{
-      color:var(--muted);
-      font-size:13px;
+    nav a {
+      font-size: 13px;
+      color: var(--muted);
+      padding: 8px 10px;
+      border: 1px solid transparent;
+      border-radius: 12px;
     }
 
-    .grid3{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:14px;
-    }
-    .grid2{
-      display:grid;
-      grid-template-columns:repeat(2, 1fr);
-      gap:14px;
-    }
-    @media (max-width: 900px){
-      .grid3, .grid2{ grid-template-columns:1fr; }
+    nav a:hover {
+      color: var(--ink);
+      border-color: var(--line);
+      background: rgba(255, 255, 255, .03);
+      text-decoration: none;
     }
 
-    .item{ padding:18px; }
-    .item h3{
-      margin:0 0 8px;
-      font-size:15px;
-    }
-    .item p{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .item ul{
-      margin:10px 0 0;
-      padding-left:18px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .item li{ margin:6px 0; }
-
-    .rule{
-      height:1px;
-      background:var(--line);
-      margin:20px 0;
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
-    .note{
-      font-family:var(--mono);
-      font-size:12px;
-      color:rgba(234,246,255,.78);
-      border:1px dashed rgba(255,255,255,.22);
-      padding:12px 14px;
-      border-radius:14px;
-      background:rgba(255,255,255,.02);
+    .hero {
+      padding: 22px;
     }
 
-    footer{
-      margin-top:30px;
-      color:var(--muted);
-      font-size:13px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      justify-content:space-between;
-      align-items:center;
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 40px;
+      line-height: 1.08;
     }
 
-    .contact{
-      padding:18px;
-      display:grid;
+    @media (max-width:520px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+    }
+
+    .hero p {
+      margin: 10px 0;
+      color: var(--muted);
+      max-width: 70ch;
+      font-size: 16px;
+    }
+
+    .pillrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .pill {
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      background: rgba(255, 255, 255, .03);
+      color: rgba(234, 246, 255, .92);
+    }
+
+    .cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      background: rgba(255, 255, 255, .03);
+      font-size: 14px;
+    }
+
+    .btn.primary {
+      border-color: rgba(121, 200, 255, .45);
+      background: linear-gradient(180deg, rgba(121, 200, 255, .18), rgba(121, 200, 255, .05));
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .sectionTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 10px;
+      margin: 26px 0 10px;
+    }
+
+    .sectionTitle h2 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: .2px;
+    }
+
+    .sectionTitle span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    @media (max-width: 900px) {
+
+      .grid3,
+      .grid2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .item {
+      padding: 18px;
+    }
+
+    .item h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    .item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .item ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .item li {
+      margin: 6px 0;
+    }
+
+    .rule {
+      height: 1px;
+      background: var(--line);
+      margin: 20px 0;
+    }
+
+    .note {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: rgba(234, 246, 255, .78);
+      border: 1px dashed rgba(255, 255, 255, .22);
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .02);
+    }
+
+    footer {
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact {
+      padding: 18px;
+      display: grid;
       grid-template-columns: 1.2fr .8fr;
-      gap:14px;
+      gap: 14px;
     }
-    @media (max-width: 900px){ .contact{ grid-template-columns:1fr; } }
-    .contact .box{
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:14px;
-      background:rgba(255,255,255,.02);
-      padding:14px;
+
+    @media (max-width: 900px) {
+      .contact {
+        grid-template-columns: 1fr;
+      }
     }
-    .k{ font-family:var(--mono); font-size:12px; color:rgba(234,246,255,.72); }
-    .v{ margin-top:6px; font-size:14px; color:var(--ink); }
+
+    .contact .box {
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .02);
+      padding: 14px;
+    }
+
+    .k {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: rgba(234, 246, 255, .72);
+    }
+
+    .v {
+      margin-top: 6px;
+      font-size: 14px;
+      color: var(--ink);
+    }
   </style>
 </head>
 
@@ -258,14 +321,16 @@
     </header>
 
     <main class="card hero">
-      <h1>Production-level execution.</h1>
+      <h1>The Product Revolution</h1>
       <p>
-        I am a CTO-level technical leader with 20+ years of hands-on experience building connected systems and complex platforms.
-        I step in as a temporary CTO, architect, or senior developer when teams need to move fast, stabilize a system, or design something that has to last.
-      </p>
+        <strong>Vision</strong><br>
+        AI enables small, disciplined teams to build, automate, and launch products that once required entire
+        organizations. We exist to capitalize on that shift.
       <p>
-        I can plug into an existing team, lead a small team, or work independently. No overhead.
-        I manage my own work, provide technical leadership, and implement directly when needed.
+        <strong>Mission</strong><br>
+        Our mission is to systematically automate every repeatable part of doing business, starting with
+        human‑in‑the‑loop decisions and evolving toward trustworthy, gate‑controlled autonomy. We focus especially on
+        “boring businesses”: the everyday operations, processes, and workflows that quietly keep companies running.
       </p>
 
       <div class="pillrow" aria-label="Focus areas">
@@ -283,72 +348,114 @@
       </div>
     </main>
 
-        <section id="services">
+    <!-- Products -->
+    <section id="products">
       <div class="sectionTitle">
-        <h2>Consulting services</h2>
-        <span>Pick one or combine</span>
+        <h2>Products</h2>
+        <span>Product engine & offerings</span>
       </div>
 
-      <div class="grid3">
-        <div class="card item">
-          <h3>Vision &amp; Mission</h3>
-          <p><strong>Vision — The Product Revolution</strong><br>
-          AI enables small, disciplined teams to build, automate, and launch products that once required entire organizations. We exist to capitalize on that shift.</p>
 
-          <p><strong>Mission</strong><br>
-          C0nnected Circles exists to prove that working smarter is not only possible, but it's the new competitive advantage. We believe the world is entering a "Product Revolution", where AI enables individuals and small teams to build faster, automate more, and launch ideas that once required entire organizations. Our mission is to systematically automate every repeatable part of doing business, starting with human-in-the-loop decisions and evolving toward trustworthy, gate-controlled autonomy. We focus especially on what many call "boring businesses": the everyday operations, processes, and workflows that quietly keep companies running.</p>
-        </div>
-
-        <div class="card item">
-          <h3>Architecture & Platform Design</h3>
-          <p>Connected, distributed, and cloud-native system design built for real constraints.</p>
-          <ul>
-            <li>Eventing, orchestration, and system boundaries</li>
-            <li>Edge-to-cloud data flow and observability</li>
-            <li>Security across device, network, and cloud layers</li>
-          </ul>
-        </div>
-
-        <div class="card item">
-          <h3>Hands-On Senior Engineering</h3>
-          <p>I implement directly—especially where ambiguity, risk, or depth is high.</p>
-          <ul>
-            <li>Greenfield prototypes → production hardening</li>
-            <li>Performance, reliability, and incident-driven fixes</li>
-            <li>Refactors that reduce long-term drag</li>
-          </ul>
-        </div>
+      <div class="card item" style="margin-bottom:14px;">
+        <h3>Product Engine</h3>
+        <p>Market-facing, edge-enabled products that generate IP and recurring revenue.</p>
+        <ul>
+          <li><b>[No name]</b> Ghost inventory management</li>
+          <li><b>[Silver Frame]</b> Medication reminder devices</li>
+          <li><b>[VisitMe]</b> Aging & care visibility platforms</li>
+          <li><b>[AI Doorman]</b> Physical Access & identity systems</li>
+        </ul>
+        <p style="margin-top:10px; color:var(--muted);"><em>Repository visibility: undecided about making these repos public under the MIT license — if you'd like to collaborate, shoot a message to hitl@c0nnectedcircles.com.</em></p>
       </div>
 
-      <div class="grid2" style="margin-top:12px">
-        <div class="card item">
-          <h3>Firmware and Edge Gateways</h3>
-          <p>Firmware, hardware interfaces, and real-time system design focused on edge gateways and embedded IoT devices. Typical starting hardware: Compulab i.MX family.</p>
-          <ul>
-            <li>Gateway selection and board bring-up (e.g., Compulab i.MX family)</li>
-            <li>AKRI connectors for Azure IoT Operations</li>
-            <li>Bootloader, secure boot, OTA updates, RTOS and low-level drivers</li>
-            <li>Power, timing, connectivity tradeoffs and production hardening</li>
-          </ul>
-        </div>
 
-        <div class="card item">
-          <h3>Product Development: Spec → Production</h3>
-          <p>End-to-end product engineering from specification through manufacturing and launch.</p>
-          <ul>
-            <li>Specification, prototyping, and validation</li>
-            <li>Manufacturing readiness, testing, and supply-chain coordination</li>
-            <li>Release, certification, and post-launch support</li>
-          </ul>
-        </div>
+      <div class="sectionTitle" style="margin-top:22px">
+        <h2>Where is HITL?</h2>
+        <span>Studio (fuel engine)</span>
       </div>
 
-      <div class="rule"></div>
-
-      <div class="note">
-        Technical focus: connected devices • edge computing • sensors • computer vision • cybersecurity • cloud connectivity • networking •
-        Azure platforms (incl. IoT Hub, Kubernetes) • Microsoft Fabric • large-scale orchestration.
+      <div class="card item" style="margin-bottom:14px;">
+        <p>Local-first, human-in-the-loop Studio that automates repetitive business tasks while preserving oversight
+          and safety.</p>
+        <ul>
+          <li>Accelerates product development and operational automation</li>
+          <li>Deployable locally or in cloud with repeatable patterns</li>
+          <li>Human oversight, governance, and staged cloud escalation</li>
+          <li>Monetize deployments to fund product R&D</li>
+        </ul>
       </div>
+
+      <!-- Services -->
+      <section id="services">
+        <div class="sectionTitle">
+          <h2>Services</h2>
+          <span>Consulting, integration, and training</span>
+        </div>
+
+        <div class="grid3">
+          <div class="card item">
+            <h3>Architecture &amp; Platform Design</h3>
+            <p>Connected, distributed, and cloud-native system design built for real constraints.</p>
+            <ul>
+              <li>Eventing, orchestration, and system boundaries</li>
+              <li>Edge-to-cloud data flow and observability</li>
+              <li>Security across device, network, and cloud layers</li>
+            </ul>
+          </div>
+
+          <div class="card item">
+            <h3>Hands-On Senior Engineering</h3>
+            <p>I implement directly—especially where ambiguity, risk, or depth is high.</p>
+            <ul>
+              <li>Greenfield prototypes → production hardening</li>
+              <li>Performance, reliability, and incident-driven fixes</li>
+              <li>Refactors that reduce long-term drag</li>
+            </ul>
+          </div>
+
+          <div class="card item">
+            <h3>Consulting &amp; Support</h3>
+            <p>Adoption strategy, training, and implementation to operationalize agents and connected systems.</p>
+            <ul>
+              <li>Adoption strategy and spec-driven training for Code agent collaboration</li>
+              <li>Implementation &amp; IT services with <a href="https://balihans.com/">Balihans</a> for transformation and integration</li>
+              <li>Factory connectivity via <a href="https://meshsystems.com/">Mesh Systems</a> and AKRI connectors to Azure</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid2" style="margin-top:12px">
+          <div class="card item">
+            <h3>Firmware and Edge Gateways</h3>
+            <p>Firmware, hardware interfaces, and real-time system design focused on edge gateways and embedded IoT
+              devices.</p>
+            <ul>
+              <li>Gateway selection and board bring-up (e.g., <a href="https://www.compulab.com/products/iot-gateways/">Compulab i.MX family</a>)</li>
+              <li>AKRI connectors for Azure IoT Operations</li>
+              <li>Bootloader, secure boot, OTA updates, RTOS and low-level drivers</li>
+            </ul>
+          </div>
+
+          <div class="card item">
+            <h3>Product Development: Spec → Production</h3>
+            <p>End-to-end product engineering from specification through manufacturing and launch.</p>
+            <ul>
+              <li>Specification, prototyping, and validation</li>
+              <li>Manufacturing readiness, testing, and supply-chain coordination</li>
+              <li>Release, certification, and post-launch support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rule"></div>
+
+        <div class="note">
+          Technical focus: connected devices • edge computing • sensors • computer vision • cybersecurity • cloud
+          connectivity • networking •
+          Azure platforms (incl. IoT Hub, Kubernetes) • Microsoft Fabric • large-scale orchestration.
+        </div>
+
+      </section>
     </section>
 
     <section id="fit">
@@ -360,7 +467,8 @@
         <div class="card item">
           <h3>You have an idea and need help getting it off the ground</h3>
           <p>
-            I turn early concepts into an executable plan and a first durable implementation: boundaries, architecture,
+            I turn early concepts into an executable plan and a first durable implementation: boundaries,
+            architecture,
             stack choices, and a build path that avoids dead-ends.
           </p>
           <ul>
@@ -373,7 +481,8 @@
         <div class="card item">
           <h3>Your team needs better productivity and predictability</h3>
           <p>
-            When delivery slows down, the root cause is usually unclear intent, fuzzy interfaces, and hidden dependencies.
+            When delivery slows down, the root cause is usually unclear intent, fuzzy interfaces, and hidden
+            dependencies.
             I bring execution discipline that translates into reliable throughput.
           </p>
           <ul>
@@ -386,7 +495,8 @@
         <div class="card item">
           <h3>Your project is massive and knowledge is locked in a few people</h3>
           <p>
-            Systems that “only a few people understand” don't scale. I help externalize knowledge, reduce key-person risk,
+            Systems that “only a few people understand” don't scale. I help externalize knowledge, reduce key-person
+            risk,
             and create boundaries that enable new contributors.
           </p>
           <ul>
@@ -401,17 +511,17 @@
     <section id="contact">
       <div class="sectionTitle">
         <h2>Contact</h2>
-        <span>Replace placeholders below</span>
       </div>
 
       <div class="card contact">
         <div class="box">
           <div class="k">Let's talk if</div>
           <div class="v">
-            You're building something complex, stabilizing something fragile, or preparing for scale—and you want senior hands-on leadership.
+            You're building something complex, stabilizing something fragile, or preparing for scale—and you want
+            senior hands-on leadership.
           </div>
           <div class="cta" style="margin-top:12px">
-            <a class="btn primary" href="mailto:urielkluk@gmail.com"><strong>Email me</strong> →</a>
+            <a class="btn primary" href="mailto:hitl@c0nnectedcircles.com"><strong>Email me</strong> →</a>
             <a class="btn" href="https://www.linkedin.com/in/uriel-kluk-35ba8a9b/">LinkedIn</a>
           </div>
         </div>
@@ -419,9 +529,11 @@
         <div class="box">
           <div class="k">Details</div>
           <div class="v">
-            <div><span class="k">Email:</span> <span class="mono">urielkluk@gmail.com</span></div>
-            <div style="margin-top:8px"><span class="k">Location:</span> <span class="mono">United States (Remote)</span></div>
-            <div style="margin-top:8px"><span class="k">Engagements:</span> <span class="mono">fractional • sprint • build</span></div>
+            <div><span class="k">Email:</span> <span class="mono">hitl@c0nnectedcircles.com</span></div>
+            <div style="margin-top:8px"><span class="k">Location:</span> <span class="mono">United States
+                (Remote)</span></div>
+            <div style="margin-top:8px"><span class="k">Engagements:</span> <span class="mono">fractional • sprint •
+                build</span></div>
           </div>
         </div>
       </div>
@@ -437,4 +549,5 @@
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>

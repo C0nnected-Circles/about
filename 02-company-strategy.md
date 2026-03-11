@@ -2,12 +2,10 @@
 
 ## 1. Identity
 
-We are an AI-native product company building real-world, revenue-generating products — while developing and deploying a disciplined AI Studio that enables repeated product creation, automation, and scale.
+We are an AI-native product company building real-world, revenue-generating products — while developing and deploying a disciplined "Where is HITL?" Studio that enables repeated product creation, automation, and scale.
 
-The AI Studio is the fuel.
+The "Where is HITL?" Studio is the fuel.
 Products are the destination.
-
----
 
 ## 2. Core Thesis
 
@@ -23,7 +21,7 @@ Small, disciplined teams can now:
 We are building:
 
 1. Market-facing AI-powered products.
-2. The internal AI Studio that makes repeatable product creation possible.
+2. The internal "Where is HITL?" Studio that makes repeatable product creation possible.
 
 ---
 
@@ -35,10 +33,16 @@ The company operates under one unified umbrella with two engines:
 
 Focus Areas:
 
-- Trust-centered AI systems
+- Ghost inventory management — physical AI systems
+- Medication reminder devices
 - Aging and care visibility platforms (e.g., VisitMe)
 - Access and identity systems (e.g., AI Doorman)
-- Human-in-the-loop AI infrastructure in physical environments
+- OpenClaw edge agentic rule engine
+- IoT DevKit using [Compulab's IoT Gateways](https://www.compulab.com/products/iot-gateways/)
+  - First class citizen to IoT Hub with certificate rotation
+  - TPMv2 for secure key storage and attestation
+  - ADU integration for secure, scalable updates
+  - Smart IO and southbound connectivity (BLE and RS485)
 
 Goals:
 
@@ -50,14 +54,16 @@ Goals:
 
 ---
 
-### 3.2 AI Studio (Fuel Engine)
+### 3.2 Where is HITL? Studio (Fuel Engine)
+
+Local-first AI agents "in a box" that automate repetitive business tasks while keeping human oversight (human-in-the-loop).
 
 Purpose:
 
 - Accelerate internal product development
 - Deploy AI automation into operational environments
 - Generate capital to fund R&D
-- Harden and refine AI governance architecture
+- Harden and refine AI governance and safety architecture
 
 The Studio:
 
@@ -68,11 +74,29 @@ The Studio:
 
 ---
 
+### 3.3 Consulting and Support (new)
+
+We provide services, training, and integration support to help organizations adopt business-facing AI agents and operationalize AI safely and effectively.
+
+Offerings:
+
+- Advisory & adoption strategy: roadmap, change management, and governance for agent-driven business processes.
+- Training & enablement: upskilling programs that teach teams how to adopt spec-driven processes and collaborate with Code agents; the new programmer role focuses on defining specs, orchestration, and review rather than hand-writing code.
+
+#### Implementation, IT & Edge Integration (non-AI)
+
+These offerings focus on traditional IT, systems integration, and edge connectivity rather than AI model development.
+
+- Implementation & IT services: in partnership with [Balihans](https://balihans.com/), we support digital transformation projects, systems integration, and enterprise IT modernization.
+- Edge & factory connectivity: through [Mesh Systems](https://meshsystems.com/), we connect factory floors to Azure using AIO and develop AKRI connectors for secure, low-latency integration of edge devices and agents.
+
+---
+
 ## 4. Revenue Model (Phase 1 – 12 Months)
 
 Primary Revenue:
 
-- AI Studio deployments in business environments
+- "Where is HITL?" Studio deployments in business environments
 - Structured AI workflow automation programs
 - High-leverage implementation engagements
 
@@ -90,7 +114,7 @@ Product revenue is expected in Phase 2+.
 
 ### Phase 1 (0–12 months)
 
-- Monetize Studio deployments
+- Monetize "Where is HITL?" deployments
 - Build VisitMe MVP (software-first)
 - File provisional patents
 - Submit at least one grant
@@ -114,7 +138,7 @@ Product revenue is expected in Phase 2+.
 
 We do not sell generic consulting.
 
-We deploy our AI Studio inside operational environments.
+We deploy our "Where is HITL?" Studio inside operational environments.
 
 The Studio:
 
@@ -140,7 +164,7 @@ The Studio:
 Possible Futures:
 
 1. Edge product (VisitMe) becomes primary revenue engine.
-2. AI Studio becomes scalable platform offering.
+2. "Where is HITL?" becomes scalable platform offering.
 3. Hybrid model with both growing in parallel.
 
 The strategy preserves all three options.
