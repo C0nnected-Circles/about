@@ -88,7 +88,7 @@ Offerings:
 These offerings focus on traditional IT, systems integration, and edge connectivity rather than AI model development.
 
 - Implementation & IT services: in partnership with [Balihans](https://balihans.com/), we support digital transformation projects, systems integration, and enterprise IT modernization.
-- Edge & factory connectivity: through [Mesh Systems](https://meshsystems.com/), we connect factory floors to Azure using AIO and develop AKRI connectors for secure, low-latency integration of edge devices and agents.
+- Edge & factory connectivity: through [Mesh Systems](https://meshsystems.com/), we connect factory floors to Azure using AIO and develop [AKRI connectors](https://learn.microsoft.com/en-us/azure/iot-operations/) for secure, low-latency integration of edge devices and agents.
 
 ---
 
